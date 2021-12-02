@@ -1,0 +1,114 @@
+.toggle--container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: var(--font-size-body);
+    line-height: var(--font-line-height-body);
+    font-weight: var(--font-weight-regular);
+    color: var(--neutral-color-600);
+}
+
+/* Hide the browser's default toggle */
+.toggle--container .toggle--input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom toggle */
+.toggle--checkmark {
+    position: absolute;
+    top: 0.2em;
+    left: 0;
+    height: 20px;
+    width: 36px;
+    background-color: var(--neutral-color-400);
+    border-radius: 10px;
+}
+.toggle--text-type .toggle--checkmark {
+    width: 46px;
+}
+
+.toggle--container.checked .toggle--checkmark {
+    background-color: var(--primary-color-600);
+}
+.toggle--container.disabled .toggle--checkmark {
+    background-color: var(--neutral-color-200);
+}
+.toggle--container.disabled.checked .toggle--checkmark {
+    background-color: var(--primary-color-400);
+}
+
+.toggle--checkmark:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 2px;
+    left: 2px;
+    right: auto;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: var(--width-color);
+}
+.toggle--container.checked .toggle--checkmark:after {
+    left: auto;
+    right: 2px;
+}
+
+.toggle--text {
+    position: absolute;
+    left: auto;
+    right: 4px;
+    top: 1px;
+    font-size: var(--font-size-caption);
+    line-height: var(--font-line-height-caption);
+    font-weight: var(--font-weight-regular);
+    text-transform: uppercase;
+    color: var(--width-color);
+}
+.toggle--container.checked .toggle--text {
+    left: 6px;
+    right: auto;
+}
+
+
+
+/*.toggle--container.checked .toggle--checkmark {*/
+/*    border: 1px solid var(--primary-color-600);*/
+/*}*/
+
+
+/*.toggle--container.checked .toggle--checkmark:after {*/
+/*    display: block;*/
+/*    left: 3px;*/
+/*    top: 3px;*/
+/*    width: 8px;*/
+/*    height: 8px;*/
+/*    border: none;*/
+/*    border-radius: 50%;*/
+/*    background: var(--primary-color-600);*/
+/*}*/
+
+
+/*.toggle--container.disabled .toggle--checkmark {*/
+/*    border: 1px solid var(--neutral-color-300);*/
+/*    background: var(--neutral-color-100);*/
+/*}*/
+
+/*.toggle--container.disabled.checked .toggle--checkmark:after {*/
+/*    display: block;*/
+/*    left: 3px;*/
+/*    top: 3px;*/
+/*    width: 8px;*/
+/*    height: 8px;*/
+/*    border: none;*/
+/*    border-radius: 50%;*/
+/*    background: var(--neutral-color-400);*/
+/*}*/
