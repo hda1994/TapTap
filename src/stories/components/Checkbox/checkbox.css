@@ -1,15 +1,20 @@
 .checkbox--container {
     display: block;
     position: relative;
-    padding-left: 32px;
-    margin-bottom: 12px;
+    padding-left: 24px;
     cursor: pointer;
-    font-size: 22px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    font-size: var(--font-size-body);
+    line-height: var(--font-line-height-body);
+    font-weight: var(--font-weight-regular);
     color: var(--neutral-color-600);
+}
+
+.checkbox--container.disabled {
+    color: var(--neutral-color-400);
 }
 
 /* Hide the browser's default checkbox */
@@ -24,7 +29,7 @@
 /* Create a custom checkbox */
 .checkbox--checkmark {
     position: absolute;
-    top: 0;
+    top: 0.2em;
     left: 0;
     height: 16px;
     width: 16px;
@@ -33,36 +38,80 @@
     border: 1px solid var(--neutral-color-300);
 }
 
-/* On mouse-over, add a grey background color */
-.checkbox--container:hover .checkbox--input ~ .checkbox--checkmark {
-    border: 1px solid var(--primary-color-500);
-}
-
-/* When the checkbox is checked, add a blue background */
-.checkbox--container .checkbox--input:checked ~ .checkbox--checkmark {
-    background-color: var(--primary-color-600);
-    border: 1px solid var(--primary-color-600);
-}
-
-/* Create the checkbox--checkmark/indicator (hidden when not checked) */
 .checkbox--checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
 
-/* Show the checkbox--checkmark when checked */
-.checkbox--container .checkbox--input:checked ~ .checkbox--checkmark:after {
-    display: block;
+.checkbox--container:hover .checkbox--checkmark {
+    border: 1px solid var(--primary-color-500);
 }
 
-/* Style the checkbox--checkmark/indicator */
-.checkbox--container .checkbox--checkmark:after {
-    left: 5px;
+.checkbox--container.pressed .checkbox--checkmark {
+    border: 1px solid var(--neutral-color-300);
+}
+
+.checkbox--container.checked .checkbox--checkmark {
+    border: 1px solid var(--primary-color-600);
+    background: var(--primary-color-600);
+}
+
+.checkbox--container.pressed.checked .checkbox--checkmark {
+    border: 1px solid var(--neutral-color-300);
+    background: var(--width-color);
+}
+
+.checkbox--container.pressed .checkbox--checkmark:after {
+    display: block;
+    left: 3px;
+    top: 3px;
+    width: 8px;
+    height: 8px;
+    border: none;
+    border-radius: 1px;
+    background: var(--primary-color-600);
+}
+
+.checkbox--container.checked .checkbox--checkmark:after {
+    display: block;
+    left: 4px;
     top: 1px;
     width: 4px;
     height: 8px;
     border: solid var(--width-color);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.checkbox--container.pressed.checked .checkbox--checkmark:after {
+    display: block;
+    left: 3px;
+    top: 3px;
+    width: 8px;
+    height: 8px;
+    border: none;
+    border-radius: 1px;
+    background: var(--primary-color-600);
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.checkbox--container.disabled .checkbox--checkmark {
+    border: 1px solid var(--neutral-color-300);
+    background: var(--neutral-color-100);
+}
+
+.checkbox--container.disabled.checked .checkbox--checkmark:after {
+    display: block;
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid var(--neutral-color-400);
     border-width: 0 2px 2px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);

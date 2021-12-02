@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 /*colors*/
 * {
     --black-color: #000000;
@@ -74,4 +79,23 @@
     --elevation-shadow-3: 0px 2px 20px rgba(0, 0, 0, 0.04), 0px 8px 32px rgba(0, 0, 0, 0.08);
     --elevation-shadow-4: 0px 8px 20px rgba(0, 0, 0, 0.06), 0px 24px 60px rgba(0, 0, 0, 0.12);
 }
-/**/
+/*font*/
+* {
+    --font-size-h1: 30px;
+    --font-line-height-h1: 38px;
+    --font-size-h2: 24px;
+    --font-line-height-h2: 32px;
+    --font-size-h3: 20px;
+    --font-line-height-h3: 28px;
+    --font-size-title: 18px;
+    --font-line-height-title: 26px;
+    --font-size-subtitle: 16px;
+    --font-line-height-subtitle: 24px;
+    --font-size-body: 14px;
+    --font-line-height-body: 22px;
+    --font-size-caption: 12px;
+    --font-line-height-caption: 18px;
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+}
