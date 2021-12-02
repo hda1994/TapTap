@@ -1,0 +1,77 @@
+/*colors*/
+* {
+    --black-color: #000000;
+    --width-color: #ffffff;
+
+    --neutral-color-700: #1f1f1f;
+    --neutral-color-600: #4b4b4b;
+    --neutral-color-500: #8e8e8e;
+    --neutral-color-400: #cacaca;
+    --neutral-color-300: #e1e1e1;
+    --neutral-color-200: #eeeeee;
+    --neutral-color-100: #f5f5f5;
+    --neutral-color-50: #fafafa;
+
+    --primary-color-700: #00abb6;
+    --primary-color-600: #15c5ce;
+    --primary-color-500: #47cfd6;
+    --primary-color-400: #7ddde1;
+    --primary-color-300: #b0ebec;
+    --primary-color-200: #dff7f7;
+    --primary-color-100: #eefcfc;
+    --primary-color-50: #f9ffff;
+
+    --auxiliary-color-700: #fe632f;
+    --auxiliary-color-600: #ff8156;
+    --auxiliary-color-500: #ffa487;
+    --auxiliary-color-400: #ffc8b6;
+    --auxiliary-color-300: #ffe1d6;
+    --auxiliary-color-200: #fff2ee;
+    --auxiliary-color-100: #fff6f3;
+    --auxiliary-color-50: #fffcfc;
+
+    --danger-color-700: #ec2d30;
+    --danger-color-600: #f64c4c;
+    --danger-color-500: #eb6f70;
+    --danger-color-400: #f49898;
+    --danger-color-300: #ffccd2;
+    --danger-color-200: #ffebee;
+    --danger-color-100: #fef2f2;
+    --danger-color-50: #fffbfb;
+
+    --warning-color-700: #fe9b0e;
+    --warning-color-600: #ffad0d;
+    --warning-color-500: #ffc62b;
+    --warning-color-400: #ffdd82;
+    --warning-color-300: #ffeab3;
+    --warning-color-200: #fff7e1;
+    --warning-color-100: #fff9ee;
+    --warning-color-50: #fffdfa;
+
+    --success-color-700: #0c9d61;
+    --success-color-600: #47b881;
+    --success-color-500: #6bc497;
+    --success-color-400: #97d4b4;
+    --success-color-300: #c0e5d1;
+    --success-color-200: #e5f5ec;
+    --success-color-100: #f2faf6;
+    --success-color-50: #fbfefc;
+
+    --info-color-700: #3a70e2;
+    --info-color-600: #3b82f6;
+    --info-color-500: #4ba1ff;
+    --info-color-400: #93c8ff;
+    --info-color-300: #bdddff;
+    --info-color-200: #e4f2ff;
+    --info-color-100: #f1f8ff;
+    --info-color-50: #f8fcff;
+
+}
+/*shadows*/
+* {
+    --elevation-shadow-1: 0px 1px 1px rgba(0, 0, 0, 0.02), 0px 2px 4px rgba(0, 0, 0, 0.04);
+    --elevation-shadow-2: 0px 1px 4px rgba(0, 0, 0, 0.04), 0px 4px 10px rgba(0, 0, 0, 0.08);
+    --elevation-shadow-3: 0px 2px 20px rgba(0, 0, 0, 0.04), 0px 8px 32px rgba(0, 0, 0, 0.08);
+    --elevation-shadow-4: 0px 8px 20px rgba(0, 0, 0, 0.06), 0px 24px 60px rgba(0, 0, 0, 0.12);
+}
+/**/
