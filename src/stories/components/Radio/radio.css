@@ -1,0 +1,101 @@
+.radio--container {
+    display: block;
+    position: relative;
+    padding-left: 24px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: var(--font-size-body);
+    line-height: var(--font-line-height-body);
+    font-weight: var(--font-weight-regular);
+    color: var(--neutral-color-600);
+}
+
+.radio--container.disabled {
+    color: var(--neutral-color-400);
+}
+
+/* Hide the browser's default radio */
+.radio--container .radio--input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom radio */
+.radio--checkmark {
+    position: absolute;
+    top: 0.2em;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: var(--width-color);
+    border-radius: 50%;
+    border: 1px solid var(--neutral-color-300);
+}
+
+.radio--checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio--container:hover .radio--checkmark {
+    border: 1px solid var(--primary-color-500);
+}
+
+.radio--container.pressed .radio--checkmark {
+    border: 1px solid var(--primary-color-600);
+    outline: 3px solid var(--primary-color-200);
+}
+
+.radio--container.checked .radio--checkmark {
+    border: 1px solid var(--primary-color-600);
+}
+
+.radio--container.pressed.checked .radio--checkmark {
+    border: 1px solid var(--primary-color-600);
+    outline: 3px solid var(--primary-color-200);
+}
+
+.radio--container.checked .radio--checkmark:after {
+    display: block;
+    left: 3px;
+    top: 3px;
+    width: 8px;
+    height: 8px;
+    border: none;
+    border-radius: 50%;
+    background: var(--primary-color-600);
+}
+
+.radio--container.pressed.checked .radio--checkmark:after {
+    display: block;
+    left: 3px;
+    top: 3px;
+    width: 8px;
+    height: 8px;
+    border: none;
+    border-radius: 50%;
+    background: var(--primary-color-600);
+}
+
+.radio--container.disabled .radio--checkmark {
+    border: 1px solid var(--neutral-color-300);
+    background: var(--neutral-color-100);
+}
+
+.radio--container.disabled.checked .radio--checkmark:after {
+    display: block;
+    left: 3px;
+    top: 3px;
+    width: 8px;
+    height: 8px;
+    border: none;
+    border-radius: 50%;
+    background: var(--neutral-color-400);
+}
