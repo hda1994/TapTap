@@ -20,6 +20,14 @@ export const Textarea = ({
                          }: TextareaProps) => {
 
     return (
-        <textarea className={'textarea'} placeholder={placeholder}>{text}</textarea>
+        <React.Fragment>
+            <textarea className={'textarea'} placeholder={placeholder}>{text}
+            </textarea>
+            <div className='textarea--count-wrapper'>
+                <div className='textarea--count'>1234</div>
+            </div>
+        </React.Fragment>
     );
 };
+
+
