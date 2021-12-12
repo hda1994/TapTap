@@ -4,13 +4,18 @@
   border: 0;
   border-radius: 4px;
   cursor: pointer;
-  display: inline-block;
   line-height: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .button--primary {
   color: var(--width-color);
   background-color: var(--primary-color-600);
+}
+.button--primary-svg {
+  fill: var(--width-color);
 }
 .button--primary:hover {
   background-color: var(--primary-color-500);
@@ -27,22 +32,37 @@
   background-color: var(--width-color);
   border: 1px solid var(--neutral-color-300);
 }
+.button--outline-svg {
+  fill: var(--neutral-color-600);
+}
 .button--outline:hover {
   color: var(--primary-color-500);
   border: 1px solid var(--primary-color-500);
+}
+.button--outline:hover .button--outline-svg {
+  fill: var(--primary-color-500);
 }
 .button--outline.pressed {
   color: var(--primary-color-700);
   border: 1px solid var(--primary-color-700);
 }
+.button--outline.pressed .button--outline-svg {
+  fill: var(--primary-color-700);
+}
 .button--outline:disabled {
   color: var(--neutral-color-400);
   border: 1px solid var(--neutral-color-200);
+}
+.button--outline:disabled .button--outline-svg {
+  fill: var(--neutral-color-400);
 }
 
 .button--ghost {
   color: var(--neutral-color-600);
   background-color: transparent;
+}
+.button--ghost-svg {
+  fill: var(--neutral-color-600);
 }
 .button--ghost:hover {
   background-color: var(--neutral-color-100);
@@ -53,11 +73,17 @@
 .button--ghost:disabled {
   color: var(--neutral-color-400);
 }
+.button--ghost:disabled .button--ghost-svg {
+  fill: var(--neutral-color-400);
+}
 
 
 .button-danger--primary {
   color: var(--width-color);
   background-color: var(--danger-color-600);
+}
+.button-danger--primary-svg {
+  fill: var(--width-color);
 }
 .button-danger--primary:hover {
   background-color: var(--danger-color-500);
@@ -74,22 +100,37 @@
   background-color: var(--width-color);
   border: 1px solid var(--danger-color-600);
 }
+.button-danger--outline-svg {
+  fill: var(--danger-color-600);
+}
 .button-danger--outline:hover {
   color: var(--danger-color-500);
   border: 1px solid var(--danger-color-500);
+}
+.button-danger--outline:hover .button-danger--outline-svg {
+  fill: var(--danger-color-500);
 }
 .button-danger--outline.pressed {
   color: var(--danger-color-700);
   border: 1px solid var(--danger-color-700);
 }
+.button-danger--outline.pressed .button-danger--outline-svg {
+  fill: var(--danger-color-700);
+}
 .button-danger--outline:disabled {
   color: var(--danger-color-400);
   border: 1px solid var(--danger-color-400);
+}
+.button-danger--outline:disabled .button-danger--outline-svg {
+  fill: var(--danger-color-400);
 }
 
 .button-danger--ghost {
   color: var(--danger-color-600);
   background-color: transparent;
+}
+.button-danger--ghost-svg {
+  fill: var(--danger-color-600);
 }
 .button-danger--ghost:hover {
   background-color: var(--danger-color-100);
@@ -97,6 +138,9 @@
 .button-danger--ghost.pressed {
   color: var(--danger-color-700);
   background-color: var(--danger-color-300);
+}
+.button-danger--ghost.pressed .button-danger--ghost-svg {
+  fill: var(--danger-color-700);
 }
 .button-danger--ghost:disabled {
   background-color: var(--danger-color-400);
@@ -107,13 +151,25 @@
   height: 24px;
   padding: 0 4px;
 }
+.button--small-svg {
+  width: 14px;
+  height: 14px;
+}
 .button--medium {
   min-width: 98px;
   height: 36px;
   padding: 0 8px;
 }
+.button--medium-svg {
+  width: 16px;
+  height: 16px;
+}
 .button--large {
   min-width: 106px;
   height: 40px;
   padding: 0 8px;
+}
+.button--large-svg {
+  width: 18px;
+  height: 18px;
 }
