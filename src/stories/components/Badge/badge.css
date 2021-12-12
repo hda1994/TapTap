@@ -1,0 +1,28 @@
+.badge--wrapper {
+    display: inline-block;
+    position: relative;
+}
+.badge {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--width-color);
+    background: var(--danger-color-600);
+}
+.badge--dot {
+    top: -5px;
+    right: -5px;
+    height: 8px;
+    width: 8px;
+    border-radius: 4px;
+}
+.badge--number {
+    top: -11px;
+    right: -10px;
+    height: 22px;
+    border-radius: 11px;
+    color: var(--width-color);
+    min-width: 22px;
+    padding: 0 6px;
+}
