@@ -3,14 +3,14 @@ import '../../styles/constants.css';
 import './button.css';
 import {Svg} from "../Svg/Svg";
 
-// import styles from './Button.module.css';
-
 interface ButtonProps {
     type?: 'primary' | 'outline' | 'ghost';
     danger?: boolean;
     disabled?: boolean;
     size?: 'small' | 'medium' | 'large';
-    variants?: 'textOnly' | 'leftIcon' | 'rightIcon';
+    variants?: 'textOnly' | 'leftIcon' | 'rightIcon' | 'iconOnly';
+    square?: boolean;
+    svg?: any;
     label: string;
     onClick?: () => void;
 }
@@ -21,7 +21,9 @@ export const Button = ({
                            disabled = false,
                            size = 'medium',
                            variants = 'textOnly',
+                           square = true,
                            label = '',
+                           svg,
                            ...props
                        }: ButtonProps) => {
     const buttonVariant = (text: string) => {
@@ -35,13 +37,19 @@ export const Button = ({
             case 'rightIcon':
                 return (
                     <React.Fragment>
-                        {text}<Svg className={`${mode}--${type}-svg button--${size}-svg`}/>
+                        {text}<Svg SvgComponent={svg} className={`${mode}--${type}-svg button--${size}-svg`}/>
                     </React.Fragment>
                 );
             case 'leftIcon':
                 return (
                     <React.Fragment>
-                        <Svg className={`${mode}--${type}-svg button--${size}-svg`}/>{text}
+                        <Svg SvgComponent={svg} className={`${mode}--${type}-svg button--${size}-svg`}/>{text}
+                    </React.Fragment>
+                );
+            case 'iconOnly':
+                return (
+                    <React.Fragment>
+                        <Svg SvgComponent={svg} className={`${mode}--${type}-svg button--${size}-svg`}/>
                     </React.Fragment>
                 );
         }
@@ -53,10 +61,12 @@ export const Button = ({
         <button
             type="button"
             className={[
+                square ? 'button--square' : 'button--round',
                 'button',
                 `button--${size}`,
                 `${mode}--${type}`,
-                pressed
+                pressed,
+                variants === 'iconOnly' ? 'button--icon-only' : ''
             ].join(' ')}
             onMouseDown={() => setPressed('pressed')}
             onMouseUp={() => setPressed('')}

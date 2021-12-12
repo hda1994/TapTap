@@ -1,175 +1,233 @@
 .button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  border: 0;
-  border-radius: 4px;
-  cursor: pointer;
-  line-height: 1;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    border: 0;
+    cursor: pointer;
+    line-height: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
+.button--square {
+    border-radius: 4px;
+}
+
+.button--round {
+    border-radius: 50vh;
+}
+
+
 .button--primary {
-  color: var(--width-color);
-  background-color: var(--primary-color-600);
+    color: var(--width-color);
+    background-color: var(--primary-color-600);
 }
+
 .button--primary-svg {
-  fill: var(--width-color);
+    fill: var(--width-color);
 }
+
 .button--primary:hover {
-  background-color: var(--primary-color-500);
+    background-color: var(--primary-color-500);
 }
+
 .button--primary.pressed {
-  background-color: var(--primary-color-700);
+    background-color: var(--primary-color-700);
 }
+
 .button--primary:disabled {
-  background-color: var(--primary-color-300);
+    background-color: var(--primary-color-300);
 }
 
 .button--outline {
-  color: var(--neutral-color-600);
-  background-color: var(--width-color);
-  border: 1px solid var(--neutral-color-300);
+    color: var(--neutral-color-600);
+    background-color: var(--width-color);
+    border: 1px solid var(--neutral-color-300);
 }
+
 .button--outline-svg {
-  fill: var(--neutral-color-600);
+    fill: var(--neutral-color-600);
 }
+
 .button--outline:hover {
-  color: var(--primary-color-500);
-  border: 1px solid var(--primary-color-500);
+    color: var(--primary-color-500);
+    border: 1px solid var(--primary-color-500);
 }
+
 .button--outline:hover .button--outline-svg {
-  fill: var(--primary-color-500);
+    fill: var(--primary-color-500);
 }
+
 .button--outline.pressed {
-  color: var(--primary-color-700);
-  border: 1px solid var(--primary-color-700);
+    color: var(--primary-color-700);
+    border: 1px solid var(--primary-color-700);
 }
+
 .button--outline.pressed .button--outline-svg {
-  fill: var(--primary-color-700);
+    fill: var(--primary-color-700);
 }
+
 .button--outline:disabled {
-  color: var(--neutral-color-400);
-  border: 1px solid var(--neutral-color-200);
+    color: var(--neutral-color-400);
+    border: 1px solid var(--neutral-color-200);
 }
+
 .button--outline:disabled .button--outline-svg {
-  fill: var(--neutral-color-400);
+    fill: var(--neutral-color-400);
 }
 
 .button--ghost {
-  color: var(--neutral-color-600);
-  background-color: transparent;
+    color: var(--neutral-color-600);
+    background-color: transparent;
 }
+
 .button--ghost-svg {
-  fill: var(--neutral-color-600);
+    fill: var(--neutral-color-600);
 }
+
 .button--ghost:hover {
-  background-color: var(--neutral-color-100);
+    background-color: var(--neutral-color-100);
 }
+
 .button--ghost.pressed {
-  background-color: var(--neutral-color-300);
+    background-color: var(--neutral-color-300);
 }
+
 .button--ghost:disabled {
-  color: var(--neutral-color-400);
+    color: var(--neutral-color-400);
 }
+
 .button--ghost:disabled .button--ghost-svg {
-  fill: var(--neutral-color-400);
+    fill: var(--neutral-color-400);
 }
 
 
 .button-danger--primary {
-  color: var(--width-color);
-  background-color: var(--danger-color-600);
+    color: var(--width-color);
+    background-color: var(--danger-color-600);
 }
+
 .button-danger--primary-svg {
-  fill: var(--width-color);
+    fill: var(--width-color);
 }
+
 .button-danger--primary:hover {
-  background-color: var(--danger-color-500);
+    background-color: var(--danger-color-500);
 }
+
 .button-danger--primary.pressed {
-  background-color: var(--danger-color-700);
+    background-color: var(--danger-color-700);
 }
+
 .button-danger--primary:disabled {
-  background-color: var(--danger-color-300);
+    background-color: var(--danger-color-300);
 }
 
 .button-danger--outline {
-  color: var(--danger-color-600);
-  background-color: var(--width-color);
-  border: 1px solid var(--danger-color-600);
+    color: var(--danger-color-600);
+    background-color: var(--width-color);
+    border: 1px solid var(--danger-color-600);
 }
+
 .button-danger--outline-svg {
-  fill: var(--danger-color-600);
+    fill: var(--danger-color-600);
 }
+
 .button-danger--outline:hover {
-  color: var(--danger-color-500);
-  border: 1px solid var(--danger-color-500);
+    color: var(--danger-color-500);
+    border: 1px solid var(--danger-color-500);
 }
+
 .button-danger--outline:hover .button-danger--outline-svg {
-  fill: var(--danger-color-500);
+    fill: var(--danger-color-500);
 }
+
 .button-danger--outline.pressed {
-  color: var(--danger-color-700);
-  border: 1px solid var(--danger-color-700);
+    color: var(--danger-color-700);
+    border: 1px solid var(--danger-color-700);
 }
+
 .button-danger--outline.pressed .button-danger--outline-svg {
-  fill: var(--danger-color-700);
+    fill: var(--danger-color-700);
 }
+
 .button-danger--outline:disabled {
-  color: var(--danger-color-400);
-  border: 1px solid var(--danger-color-400);
+    color: var(--danger-color-400);
+    border: 1px solid var(--danger-color-400);
 }
+
 .button-danger--outline:disabled .button-danger--outline-svg {
-  fill: var(--danger-color-400);
+    fill: var(--danger-color-400);
 }
 
 .button-danger--ghost {
-  color: var(--danger-color-600);
-  background-color: transparent;
+    color: var(--danger-color-600);
+    background-color: transparent;
 }
+
 .button-danger--ghost-svg {
-  fill: var(--danger-color-600);
+    fill: var(--danger-color-600);
 }
+
 .button-danger--ghost:hover {
-  background-color: var(--danger-color-100);
+    background-color: var(--danger-color-100);
 }
+
 .button-danger--ghost.pressed {
-  color: var(--danger-color-700);
-  background-color: var(--danger-color-300);
+    color: var(--danger-color-700);
+    background-color: var(--danger-color-300);
 }
+
 .button-danger--ghost.pressed .button-danger--ghost-svg {
-  fill: var(--danger-color-700);
+    fill: var(--danger-color-700);
 }
+
 .button-danger--ghost:disabled {
-  background-color: var(--danger-color-400);
+    background-color: var(--danger-color-400);
 }
 
 .button--small {
-  min-width: 62px;
-  height: 24px;
-  padding: 0 4px;
+    min-width: 62px;
+    height: 24px;
+    padding: 0 4px;
 }
+
+.button--small.button--icon-only {
+    min-width: 24px;
+}
+
 .button--small-svg {
-  width: 14px;
-  height: 14px;
+    width: 14px;
+    height: 14px;
 }
+
 .button--medium {
-  min-width: 98px;
-  height: 36px;
-  padding: 0 8px;
+    min-width: 98px;
+    height: 36px;
+    padding: 0 8px;
 }
+
+.button--medium.button--icon-only {
+    min-width: 36px;
+}
+
 .button--medium-svg {
-  width: 16px;
-  height: 16px;
+    width: 16px;
+    height: 16px;
 }
+
+
 .button--large {
-  min-width: 106px;
-  height: 40px;
-  padding: 0 8px;
+    min-width: 106px;
+    height: 40px;
+    padding: 0 8px;
 }
+
+.button--large.button--icon-only {
+    min-width: 40px;
+}
+
 .button--large-svg {
-  width: 18px;
-  height: 18px;
+    width: 18px;
+    height: 18px;
 }
