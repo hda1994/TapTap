@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import '../../styles/constants.css';
 import './button.css';
-// import styles from './Button.module.css';
+import {Svg} from "../Svg/Svg";
 
+// import styles from './Button.module.css';
 
 interface ButtonProps {
     type?: 'primary' | 'outline' | 'ghost';
@@ -20,9 +21,32 @@ export const Button = ({
                            disabled = false,
                            size = 'medium',
                            variants = 'textOnly',
-                           label,
+                           label = '',
                            ...props
                        }: ButtonProps) => {
+    const buttonVariant = (text: string) => {
+        switch (variants) {
+            case 'textOnly':
+                return (
+                    <React.Fragment>
+                        {text}
+                    </React.Fragment>
+                );
+            case 'rightIcon':
+                return (
+                    <React.Fragment>
+                        {text}<Svg className={`${mode}--${type}-svg button--${size}-svg`}/>
+                    </React.Fragment>
+                );
+            case 'leftIcon':
+                return (
+                    <React.Fragment>
+                        <Svg className={`${mode}--${type}-svg button--${size}-svg`}/>{text}
+                    </React.Fragment>
+                );
+        }
+    }
+
     const mode = danger ? 'button-danger' : 'button';
     const [pressed, setPressed] = useState('');
     return (
@@ -40,7 +64,7 @@ export const Button = ({
             disabled={disabled}
             {...props}
         >
-            {label}
+            {buttonVariant(label)}
         </button>
     );
 };
